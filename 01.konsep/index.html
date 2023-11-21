@@ -9,6 +9,46 @@
     <style>
     .container {
         border: 5px solid black;
+        width: 600px;
+        height: 400px;
+        text-align: center;
+        margin: 50px auto;
+        display: grid;
+        grid-template-areas: "header header"
+        "aside main"
+        "nav main"
+        "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1.2fr 1.3fr .2fr;
+        padding: 5px;
+    }
+    header, aside, nav, main, footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header {
+        grid-area: header;
+        background-color: yellowgreen;
+    }
+    aside {
+        grid-area: aside;
+        background-color: aqua;
+
+    }
+    nav {
+        grid-area: nav;
+        background-color: cadetblue;
+    }
+    main {
+        grid-area: main;
+        background-color: salmon;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        grid-area: footer;
+        background-color: brown;
     }
     </style>
     <body>
