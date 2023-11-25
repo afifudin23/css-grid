@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas & Grid Gap</title>
+    <style>
+        .container {
+            width: 80%;
+            height: 500px;
+            margin: 50px auto;
+            display: grid;
+            grid-template: [awal1] 'header header header' 1fr [akhir1 awal2] 'content content content' 2fr [akhir2 awal3] 'footer footer footer' 3fr [akhir3] / 1fr 1fr 1fr;
+            /* grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: [awal1] 1fr [akhir1 awal2] 2fr [akhir2 awal3] 3fr [akhir3];
+            grid-template-areas: 
+                'header header header'
+                'content content content'
+                'footer footer footer'; */
+        }
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+        }
+        .item:nth-child(even){
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+</body>
+</html>

@@ -9,7 +9,8 @@
             width: 80%;
             margin: 50px auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas: 
             'header header header'
             'sidebar sidebar sidebar'
@@ -20,7 +21,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px;
+            padding: 100px;
         }
         .header {
             grid-area: header;
