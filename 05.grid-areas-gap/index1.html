@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas & Grid Gap</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'header header header'
+            'sidebar sidebar sidebar'
+            'content content content'
+            'footer footer footer';
+        }
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        .header {
+            grid-area: header;
+            background-color: blueviolet;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: aqua;
+        }
+        .content {
+            grid-area: content;
+            background-color: darkgoldenrod;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: brown;
+        }
+
+        /* Responsive Breakpoint */
+        @media screen and (min-width: 576px) {
+            .container {
+                grid-template-areas: 
+                'header header header'
+                'sidebar content content'
+                'sidebar content content'
+                'footer footer footer';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+
+</body>
+</html>
