@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Alignment: Align Items</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 100px auto;
+            grid-template-rows: repeat(3, 130px);
+            grid-template-columns: repeat(3, 1fr);
+            display: grid;
+            gap: 5px;
+
+            align-items: start;
+            /* align-items: stretch; */
+            /* align-items: center; */
+            /* align-items: end; */
+
+        }
+        .item {
+            border: 3px solid black;
+            height: 100px;
+            background-color: lightblue;
+        }
+        .i1, .i4, .i7 {
+            width: 130px;
+        }
+        .i2, .i5, .i8 {
+            width: 80px;
+        }
+        .i3, .i6, .i9 {
+            width: 170px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item i1">1</div>
+        <div class="item i2">2</div>
+        <div class="item i3">3</div>
+        <div class="item i4">4</div>
+        <div class="item i5">5</div>
+        <div class="item i6">6</div>
+        <div class="item i7">7</div>
+        <div class="item i8">8</div>
+        <div class="item i9">9</div>
+    </div>
+</body>
+</html>
