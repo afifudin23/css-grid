@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Column & Grid Row</title>
+    <style>
+        .container {
+            width: 70%;
+            border: 3px solid blue;
+            margin: 100px auto;
+            display: grid;
+            /* grid-template-columns: 190px 120px 170px;
+            grid-template-rows: repeat(3, 100px); */
+
+            grid-template-columns: [a] 190px [b] 120px [c] 170px [d];
+            grid-template-rows: [a] 100px [b] 100px [c] 100px [d];
+            gap: 10px;
+        }
+        .num {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+        .my-item {
+            /* grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3; */
+            
+            /* grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 2;
+            grid-row-end: 3; */
+
+            /* grid-column-start: b;
+            grid-column-end: d;
+            grid-row-start: c;
+            grid-row-end: d; */
+
+            /* grid-column: column-start / column-end */
+            /* grid-row: row-start / row-end */
+            /* grid-column: b / c;
+            grid-row: c / d; */
+
+            /* grid: area | row-start / column-start / row-end / column-end; */
+            grid-area: c / a / d / d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="num my-item">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num">4</div>
+        <div class="num">5</div>
+        <div class="num">6</div>
+        <!-- <div class="num">7</div>
+        <div class="num">8</div>
+        <div class="num">9</div> -->
+    </div>
+</body>
+</html>
