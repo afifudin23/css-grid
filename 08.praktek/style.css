@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: aliceblue;
+    background-color: #ddd;
+    font-size: 18px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    margin: 50px;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas: 
+        "hero hero project-1"
+        "hero hero project-2";
+}
+.hero {
+    grid-area: hero;
+    min-height: 350px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+.hero .heading {
+    font-family: 'DM Serif Display', serif;
+}
+.hero > * {
+    display: none;
+}
+.project {
+    background-color: #000;
+    display: grid;
+    font-weight: bold;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    place-content: end center;
+}
+.project .item {
+    font-size: 1.5em;
+}
+.project-1 {
+    grid-area: project-1;
+    background-image: url("img/movie.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.project-2 {
+    grid-area: project-2;
+    background-image: url("img/news.jpg");
+    background-position: center;
+    background-size: cover;
+}
