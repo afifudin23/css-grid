@@ -25,7 +25,7 @@ body {
 .hero {
     grid-area: hero;
     min-height: 350px;
-    background-image: url(img/hero.jpg);
+    background-image: url("img/hero.avif");
     background-size: cover;
     background-position: center;
     padding: 50px;
@@ -48,6 +48,10 @@ body {
 .project .item {
     font-size: 1.5em;
 }
+.project .date {
+    font-weight: 200;
+
+}
 .project-1 {
     grid-area: project-1;
     background-image: url("img/movie.jpg");
@@ -56,7 +60,39 @@ body {
 }
 .project-2 {
     grid-area: project-2;
-    background-image: url("img/news.jpg");
+    background-image: url("img/news.avif");
     background-position: center;
     background-size: cover;
 }
+
+/* Navigation */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* background-color: aquamarine; */
+    align-items: center;
+}
+.menu .brand {
+    font-size: 1.5em;
+    color: #000;
+    font-family: 'DM Serif Display', serif;
+    
+}
+.menu ul {
+    gap: 5px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    font-weight: bold;
+    text-align: center;
+}
+.menu a {
+    text-decoration: none;
+    background-color: #000;
+    display: block;
+    padding: 7px;
+    color: #eee;
+    
+}
+
+
