@@ -14,7 +14,7 @@
         <header class="header">
             <div class="hero">
                 <h2 class="heading">AnDev</h2>
-                <p>An Fullstack Developer</p>
+                <p>I'm Fullstack Developer</p>
             </div>
             <div class="project project-1">
                 <div class="item">Movie Search</div>
@@ -35,9 +35,33 @@
                 <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-
             </ul>
+            <div class="menu-toggle">
+                <input type="checkbox" id="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        <section class="technology">
+            <h2>Technology</h2>
+            <div class="box">
+                <div class="icon"></div>
+                <h3>Nodejs</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quia laudantium qui modi vel corporis.</p>
+            </div>
+        </section>
     </div>
+
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle #btn-menu");
+        const nav = document.querySelector(".menu ul");
+        console.log(menuToggle);
+        console.log(nav);
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle('slide');
+        })
+    </script>
 </body>
 </html>
